@@ -1,0 +1,26 @@
+
+.profile-pic {
+    width: 300px;
+    height: 400px;
+}
+
+div {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkblue;
+}
+    
+ul {
+    list-style: none;
+  }
+
+
+.btn-danger { 
+    justify-content: center;
+    margin: 5px;
+}
+
+.btn-primary {
+    justify-content: center;
+    margin: 5px;
+}
