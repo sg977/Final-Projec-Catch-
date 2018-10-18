@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Erica",
+    "image": "https://s.abcnews.com/images/Entertainment/bachelor-contestants-chelsea-abc-jef-171211_2x3_1600.jpg",
+    "age": 25,
+    "neighborhood": "Northern Liberties"
+  },
+  {
+    "id": 2,
+    "name": "Alicia",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-valerie-abc-jef-171211_2x3_1600.jpg",
+    "age": 28,
+    "neighborhood": "Fishtown"
+  },
+  {
+    "id": 3,
+    "name": "Sarah",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jacqueline-abc-jef-171211_2x3_1600.jpg",
+    "age": 32,
+    "neighborhood": "Fairmount"
+  },
+  {
+    "id": 4,
+    "name": "Katie",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jenna-abc-jef-171211_2x3_1600.jpg",
+    "age": 22,
+    "neighborhood": "Old City"
+  },
+  {
+    "id": 5,
+    "name": "Christina",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jennifer-abc-jef-171211_2x3_1600.jpg",
+    "age": 27,
+    "neighborhood": "Center City"
+  },
+  {
+    "id": 6,
+    "name": "Erin",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-kendall-abc-jef-171211_2x3_1600.jpg",
+    "age": 25,
+    "neighborhood": "South Philly"
+  },
+  {
+    "id": 7,
+    "name": "Veronica",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jessica-abc-jef-171211_2x3_1600.jpg",
+    "age": 26,
+    "neighborhood": "South Philly"
+  },
+  {
+    "id": 8,
+    "name": "Chelsea",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-krystal-abc-jef-171211_2x3_1600.jpg",
+    "age": 33,
+    "neighborhood": "Northern Liberties"
+  },
+  {
+    "id": 9,
+    "name": "Megan",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-lauren-s-abc-jef-171211_2x3_1600.jpg",
+    "age": 24,
+    "neighborhood": "Fishtown"
+  },
+  {
+    "id": 10,
+    "name": "Vanessa",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-lauren-b-abc-jef-171211_2x3_1600.jpg",
+    "age": 31,
+    "neighborhood": "Center City"
+  },
+  {
+    "id": 11,
+    "name": "Joanne",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-olivia-abc-jef-171211_2x3_1600.jpg",
+    "age": 27,
+    "neighborhood": "Old City"
+  },
+  {
+    "id": 12,
+    "name": "Rachel",
+    "image": "http://a.abcnews.com/images/Entertainment/bachelor-contestants-rebekah-abc-jef-171211_2x3_1600.jpg",
+    "age": 28,
+    "neighborhood": "Northeast"
+  }
+]
