@@ -35,10 +35,10 @@ render() {
                         <NavLink to="#">Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="#">Link</NavLink>
+                        <NavLink to="#">Login</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="#">Profile</NavLink>
+                        <NavLink to="#">Signup</NavLink>
                     </NavItem>
                   </NavbarNav>
                 </Collapse>

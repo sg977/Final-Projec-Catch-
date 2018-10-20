@@ -1,8 +1,10 @@
 import  React, {Component} from "react";
 // import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-// import "./Login.css";
-import  Header from "components/Header";
-import Footer from "components/Footer";
+import "./Login.css";
+// import Header from "../"
+import Header from "../../components/Header"; 
+import Footer from "../../components/Footer"; 
+// 
 import { Container, Row, Col, Input, Button } from 'mdbreact';
 
 class FormsPage extends React.Component  {

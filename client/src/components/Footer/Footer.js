@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from "react";
 import { Col, Container, Row, Footer } from "mdbreact";
 
-class FooterPage extends Component {
+class FooterPage extends React.Component {
 render() {
 return (
 <Footer color="blue" className="font-small pt-4 mt-4">

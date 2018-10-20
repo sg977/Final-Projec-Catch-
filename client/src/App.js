@@ -5,6 +5,10 @@ import Landing from "./pages/Landing";
 import SignUp from "./pages/SignUp"; 
 
 import Login from "./pages/Login";
+
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 // import First from "./pages/SignUp";
 
 const App = () => (
