@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DateApp from "../../components/DateScroll";
+import DateApp from "../../components/DateApp";
 import Title from "../../components/Title";
 import dates from "./dates.json";
 import "./DateCard.css";
@@ -13,6 +13,12 @@ class DateCard extends Component {
     dates
   };
 
+  setMatch = id => {
+    // Filter this.state.dates for dates with an id not equal to the id being removed
+    const dates = this.state.dates.filter(date => date.id !== id);
+    // Set this.state.dates equal to the new dates array
+    this.setState({ dates });
+  };
 
 
   releaseMatch = id => {
@@ -28,6 +34,7 @@ class DateCard extends Component {
     return (
       <Title>
           <DateApp
+            setMatch={this.setMatch} 
             releaseMatch={this.releaseMatch}           
             key={dates[0].id}
             id={dates[0].id}
