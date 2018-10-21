@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import DateCard from "./pages/DateCard";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import InstantMessage from "./pages/InstantMessage";
 
 const App = () => (
   <Router>
@@ -12,6 +13,7 @@ const App = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/dates" component={DateCard} />
+        <Route exact path="/chat" component={InstantMessage} />
       </Switch>
     </div>
   </Router>

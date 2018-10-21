@@ -18,3 +18,16 @@ export default {
     return axios.post("/api/books", bookData);
   }
 };
+
+
+// export default {
+//   getRoom: function() {
+//     return axios.get("/api/rooms");
+//   },
+//   addMessage: function(message) {
+//     return axios.post("/api/rooms/" + id, message)
+//   },
+//   changeStatus: function(hook){
+//     return axios.update("/api/rooms/" + id, hook)
+//   }
+// }
