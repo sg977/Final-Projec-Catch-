@@ -1,0 +1,10 @@
+[
+    {
+    "senderID": 1,
+    "text": "Sent Message"
+    },
+    {
+        "senderID": 2,
+        "text": "Received Message"
+    }
+]
