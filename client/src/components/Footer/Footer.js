@@ -8,13 +8,12 @@ return (
   <Container fluid className="text-center text-md-left">
     <Row>
       <Col md="6">
-      <h5 className="title">Footer Content</h5>
+      <h5 className="title">Catch</h5>
       <p>
-        Here you can use rows and columns here to organize your footer
-        content.
+
       </p>
       </Col>
-      <Col md="6">
+      {/* <Col md="6">
       <h5 className="title">Links</h5>
       <ul>
         <li className="list-unstyled">
@@ -30,13 +29,14 @@ return (
           <a href="#!">Link 4</a>
         </li>
       </ul>
-      </Col>
+      </Col> */}
     </Row>
   </Container>
   <div className="footer-copyright text-center py-3">
     <Container fluid>
       &copy; {new Date().getFullYear()} Copyright:{" "}
-      <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+      {/* TODO: Subtitute Link to heroku */}
+      <a href="https://www.MDBootstrap.com"> Catch.com </a>
     </Container>
   </div>
 </Footer>

@@ -1,23 +1,16 @@
-// import React, { Component } from 'react';
-// import ImagesUploader from 'react-images-uploader';
-// // import 'react-images-uploader/styles.css';
-// // import 'react-images-uploader/font.css';
+// import React from 'react'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
-// class MyUploader extends Component {
-// 	render() {
-// 		return (
-// 			<ImagesUploader
-// 				url="http://localhost:3001/multiple"
-// 				optimisticPreviews
-// 				onLoadEnd={(err) => {
-// 					if (err) {
-// 						console.error(err);
-// 					}
-// 				}}
-// 				label="Upload multiple images"
-// 				/>
-// 		);
-// 	}
-// }
-
-// export default MyUploader; 
+// export default props => 
+//   props.images.map((image, i) =>
+//     <div key={i} className='fadein'>
+//       <div 
+//         onClick={() => props.removeImage(image.public_id)} 
+//         className='delete'
+//       >
+//         <FontAwesomeIcon icon={faTimesCircle} size='2x' />
+//       </div>
+//       <img src={image.secure_url} alt='' />
+//     </div>
+//   )
