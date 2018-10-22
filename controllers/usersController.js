@@ -11,7 +11,7 @@ module.exports = {
   },
   findByGender: function(req, res) {
     db.User
-      .findByGender(req.params.genderInterest)
+      .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
