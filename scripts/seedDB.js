@@ -155,9 +155,42 @@ const userSeed = [
   }
 ];
 
+const messageSeed = [
+  {
+    userOne: 1,
+    userTwo: 2,
+    hooked: false,
+    messages: [
+      {
+        text: "I am userOne",
+        senderID: 1,
+        date: new Date(Date.now())
+      },
+      {
+        text: "I am userTwo",
+        senderID: 2,
+        date: new Date(Date.now())
+      }
+    ],
+  date: new Date(Date.now())
+  }
+];
+
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  db.Chat
+  .remove({})
+  .then(() => db.Chat.collection.insertMany(messageSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

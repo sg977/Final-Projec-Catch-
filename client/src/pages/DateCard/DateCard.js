@@ -3,7 +3,7 @@ import DateApp from "../../components/DateApp";
 import Title from "../../components/Title";
 import API from "../../utils/API";
 import "./DateCard.css";
-import "./dates.json";
+import dates from "./dates.json";
 
 
 
@@ -11,28 +11,28 @@ class DateCard extends Component {
   // Setting this.state.dates to the dates json array
 
   state = {
-    dates: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    image: "",
-    age: "",
-    neighborhood: "",
-    gender: "",
-    genderInterest: ""   
+    dates
+//    firstName: "",
+//    lastName: "",
+//    email: "",
+//    password: "",
+//    image: "",
+//    age: "",
+//    neighborhood: "",
+//    gender: "",
+//    genderInterest: ""   
   };
 
-  componentDidMount() {
-    this.loadUsers();
-  }
+//  componentDidMount() {
+//    this.loadUsers();
+//  }
 
-  loadUsers = () => {
-    API.getUsers()
-      .then(res =>
-        this.setState({ dates: res.data, firstName: "", lastName: "", email: "", password: "", image: "", age: "", neighborhood: "", gender: "", genderInterest: ""}))
-      .catch(err => console.log(err));
-  };
+//  loadUsers = () => {
+//    API.getUsers()
+//      .then(res =>
+//        this.setState({ dates: res.data, firstName: "", lastName: "", email: "", password: "", image: "", age: "", neighborhood: "", gender: "", genderInterest: ""}))
+//      .catch(err => console.log(err));
+//  };
 
   setMatch = id => {
     // Filter this.state.dates for dates with an id not equal to the id being removed
@@ -60,7 +60,7 @@ class DateCard extends Component {
             key={dates[0].id}
             id={dates[0].id}
             image={dates[0].image}    
-            name={dates[0].firstName}
+            name={dates[0].name}
             age={dates[0].age}
             neighborhood={dates[0].neighborhood}
             />
