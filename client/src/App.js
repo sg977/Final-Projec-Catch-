@@ -4,15 +4,12 @@ import Notifications, {notify} from "react-notify-toast";
 import DateCard from "./pages/DateCard";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-<<<<<<< HEAD
+import InstantMessage from "./pages/InstantMessage";
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
 
 
-=======
-import InstantMessage from "./pages/InstantMessage";
->>>>>>> ee61f33213d6eae05c1d75ea060ddf124f635b16
 
 const App = () => (
   <Router>
