@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import "./Header.css";
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -21,9 +23,7 @@ class Header extends React.Component {
         return (
             <Router>
                 <Navbar color="indigo" dark expand="md" scrolling>
-                    <NavbarBrand href="/">
-                        <strong>Navbar</strong>
-                    </NavbarBrand>
+                        <img id="logo" src="https://images-na.ssl-images-amazon.com/images/I/31ddmNBX-BL._SX355_.jpg" />
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
@@ -46,13 +46,6 @@ class Header extends React.Component {
                                     <DropdownItem href="#">Something else here</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
-                          </NavItem>
-                        </NavbarNav>
-                        <NavbarNav right>
-                          <NavItem>
-                            <form className="form-inline md-form mt-0">
-                              <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search" aria-label="Search"/>
-                            </form>
                           </NavItem>
                         </NavbarNav>
                     </Collapse>

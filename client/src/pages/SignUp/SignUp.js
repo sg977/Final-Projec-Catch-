@@ -33,17 +33,10 @@ class FormsPage extends React.Component  {
   }
 
 
-  handleInputChange (event) {
+  handleInputChange = event => {
+    const { name, value } = event.target;
     this.setState({
-      firstName: event.target.firstName,
-      lastName: event.target.lastName,
-      email: event.target.email,
-      password: event.target.password,
-      image: event.target.image,
-      age: event.target.age,
-      neighborhood: event.target.neighborhood,
-      gender: event.target.gender,
-      genderInterest: event.target.genderInterest
+      [name]: value
     });
   };
 
@@ -76,16 +69,20 @@ class FormsPage extends React.Component  {
                   <p className="h4 text-center py-4">Sign up</p>
                   <div className="grey-text">
                     
-                    <Col sm="6">
+                  
                     <Input label="First Name" icon="user" group type="text" validate error="wrong" success="right"/>
                     <Input label="Last Name" icon="none" group type="text" validate error="wrong" success="right"/>
+                
+          
+                    
+                    <Input label="Gender" icon="female" group type="text" validate error="wrong" success="right" />
+                    <Col>
+                    <Input label="Gender Preference" icon="female" />
+                    <label icon="male">
+                      Gender Preference 
+                    <Select />
+                    </label>
                     </Col>
-                  
-                    
-                    <Input label="Gender" icon="female" group type="text" validate error="wrong" success="right"/>
-                    
-                    <Input label="Gender Preference" icon="female" group type="text" validate error="wrong" success="right" />
-                    <Select icon="female" />
            
                     
                     

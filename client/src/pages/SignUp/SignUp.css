@@ -18,7 +18,11 @@ Footer {
     width: 100%;
 }
 
-.grey-text {
-    float: left;
+.md-form {
+    float: left; 
+
 }
 
+.inline {
+    display: inline
+}

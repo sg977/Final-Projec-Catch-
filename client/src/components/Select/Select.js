@@ -1,36 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class Select extends React.Component {
-    constructor(props) {
-      super(props);
-
-      this.state = {value: 'Female'};
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      event.preventDefault();
-    }
-  
-    render() {
-      return (
-
-        <div class="md-form form-group">
-            <i className={`fa fa-${ this.props.icon } prefix`}></i>
-            <select value={this.state.value} onChange={this.handleChange}>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Neutral">Neutral</option>
-            </select>
-        </div>
-      );
-    }
+class Select extends Component {
+  render () {
+    return(
+      <div>
+        <select className="browser-default custom-select">
+          <option>Choose your option</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+    );
+  }
 }
 
-export default Select; 
+export default Select;
