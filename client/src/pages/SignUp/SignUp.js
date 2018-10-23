@@ -29,17 +29,10 @@ class FormsPage extends React.Component  {
   }
 
 
-  handleInputChange (event) {
+  handleInputChange = event => {
+    const { name, value } = event.target;
     this.setState({
-      firstName: event.target.firstName,
-      lastName: event.target.lastName,
-      email: event.target.email,
-      password: event.target.password,
-      image: event.target.image,
-      age: event.target.age,
-      neighborhood: event.target.neighborhood,
-      gender: event.target.gender,
-      genderInterest: event.target.genderInterest
+      [name]: value
     });
   };
 
@@ -71,15 +64,15 @@ class FormsPage extends React.Component  {
                   <p className="h4 text-center py-4">Sign up</p>
                   <div className="grey-text">
     
-                    <Input label="First Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Last Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Gender" icon="user" group type="text" validate error="wrong" success="right" />
-                    <Input label="Gender preference" icon="user" group type="text" validate error="wrong" success="right" />
-                    <Input label="Age" icon="user" group type="number" validate error="wrong" success="right" />
-                    <Input label="Neighborhood" icon="user" group type="text" validate error="wrong" success="right" /> 
-                    <Input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
-                    <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Your password" icon="lock" group type="password" validate/>
+                    <Input label="First Name" name="firstName" icon="user" group type="text" validate error="wrong" success="right" value={this.state.firstName} onChange={this.handleInputChange}/>
+                    <Input label="Last Name" name="lastName" icon="user" group type="text" validate error="wrong" success="right" value={this.state.lastName} onChange={this.handleInputChange}/>
+                    <Input label="Gender" name="gender" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange}/>
+                    <Input label="Gender preference" name="genderInterest" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Age" name="age" icon="user" group type="number" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Neighborhood" name="neighborhood" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} /> 
+                    <Input label="Your email" name="email" icon="envelope" group type="email" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Your password" name="password" icon="lock" group type="password" validate onChange={this.handleInputChange} />
 
                     <ImageUpload />
                   </div>
