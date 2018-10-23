@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Input, Button, Card, CardBody } from 'mdbreact';
+import { Container, Row, Col, Input,Button, Card, CardBody, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import API from "../../utils/API";
 import ImageUpload from "../../components/ImageTesting";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Select from "../../components/Select";
+import "./SignUp.css";
+
 
 
 
@@ -63,18 +67,29 @@ class FormsPage extends React.Component  {
   render() {
     return(
       <Container>
+        <Header />
         <Row>
           <Col lg="12">
-            <Card>
-              <CardBody>
+            {/* <Card>
+              <CardBody> */}
                 <form>
                   <p className="h4 text-center py-4">Sign up</p>
                   <div className="grey-text">
-    
+                    
+                    <Col sm="6">
                     <Input label="First Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Last Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Gender" icon="user" group type="text" validate error="wrong" success="right" />
-                    <Input label="Gender preference" icon="user" group type="text" validate error="wrong" success="right" />
+                    <Input label="Last Name" icon="none" group type="text" validate error="wrong" success="right"/>
+                    </Col>
+                  
+                    
+                    <Input label="Gender" icon="female" group type="text" validate error="wrong" success="right"/>
+                    
+                    <Input label="Gender Preference" icon="female" group type="text" validate error="wrong" success="right" />
+                    <Select icon="female" />
+           
+                    
+                    
+        
                     <Input label="Age" icon="user" group type="number" validate error="wrong" success="right" />
                     <Input label="Neighborhood" icon="user" group type="text" validate error="wrong" success="right" /> 
                     <Input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
@@ -87,8 +102,10 @@ class FormsPage extends React.Component  {
                     <Button color="cyan" type="submit" onClick={this.handleFormSubmit}>Register</Button>
                   </div>
                 </form>
-              </CardBody>
-            </Card>
+              {/* </CardBody>
+ 
+            </Card> */}
+            <Footer />
           </Col>
         </Row>
 
@@ -96,7 +113,7 @@ class FormsPage extends React.Component  {
 
         <Col lg="12">
 
-        <Footer />
+    
 
         </Col>
 

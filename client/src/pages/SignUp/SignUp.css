@@ -1,0 +1,24 @@
+Container {
+    width: 100%;
+    height: 100%
+}
+
+/* Card {
+    width: 5000px;
+} */
+
+form {
+    padding: 40px; 
+    width: 500px;
+    
+}
+
+
+Footer {
+    width: 100%;
+}
+
+.grey-text {
+    float: left;
+}
+
