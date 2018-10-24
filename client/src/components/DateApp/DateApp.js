@@ -5,7 +5,7 @@ const DateApp = props => (
     <div id="people">
     
         <div className="card">
-        <span class="border border-success">
+        <span className="border border-success">
             <div className="img-container">
                 <img className="profile-pic" alt={props.name} src={props.image}/>
             </div>
@@ -20,8 +20,8 @@ const DateApp = props => (
                 </ul>
                 <div id="control">
                     <div className="button-no">
-                        <button type="button" className="btn btn-danger" onClick={() => props.releaseMatch(props.id)}>Skip</button>
-                        <button type="button" className="btn btn-primary" onClick={() => props.setMatch(props.id)}>Cast Your Line</button>
+                        <button type="button" className="btn btn-danger" onClick={() => props.releaseMatch(props.id)}>Remove {props.name}</button>
+                        <button type="button" className="btn btn-primary" onClick={() => props.setMatch(props.id)}>Cast Your Line {props.name}</button>
                     </div>
                 </div>
             </div>

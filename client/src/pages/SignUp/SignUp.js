@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Input,Button, Card, CardBody, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { Container, Row, Col, Input, Button, Card, CardBody } from 'mdbreact';
 import API from "../../utils/API";
 import ImageUpload from "../../components/ImageTesting";
 import Header from "../../components/Header";
@@ -26,7 +26,9 @@ class FormsPage extends React.Component  {
       neighborhood: "",
       gender: "",
       genderInterest: "",
-      date: ""
+      date: "",
+      matched: false,
+      hooked: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -53,7 +55,9 @@ class FormsPage extends React.Component  {
         neighborhood: this.state.neighborhood,
         gender: this.state.gender,
         genderInterest: this.state.genderInterest,
-        date: new Date(Date.now())
+        date: new Date(Date.now()),
+        matched: this.state.matched,
+        hooked: this.state.hooked
       })
     
   };
@@ -61,16 +65,15 @@ class FormsPage extends React.Component  {
   render() {
     return(
       <div>
+        <Header />
 
       <Container>
 
-          <Header />
 
     
         <Row>
           <Col lg="12">
-            {/* <Card>
-              <CardBody> */}
+
                 <form>
                   <p className="h4 text-center py-4">Sign up</p>
                   <div className="grey-text">
@@ -94,12 +97,11 @@ class FormsPage extends React.Component  {
                     <Button color="cyan" type="submit" raised to="/dates" onClick={this.handleFormSubmit}>Register</Button>
                   </div>
                 </form>
-              {/* </CardBody>
- 
-            </Card> */}
-            
+          
           </Col>
         </Row>
+
+
 
        
       </Container>

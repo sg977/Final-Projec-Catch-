@@ -16,7 +16,9 @@ class DateCard extends Component {
     age: "",
     neighborhood: "",
     gender: "",
-    genderInterest: ""
+    genderInterest: "",
+    matched: "",
+    hooked: ""
   };
 
   componentDidMount() {
@@ -26,39 +28,40 @@ class DateCard extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res =>
-        this.setState({ dates: res.data, firstName: "", lastName: "", email: "", password: "", image: "", age: "", neighborhood: "", gender: "", genderInterest: ""}))
+        this.setState({ dates: res.data, firstName: "", lastName: "", email: "", password: "", image: "", age: "", neighborhood: "", gender: "", genderInterest: "", matched: "", hooked: ""}))
+      .catch(err => console.log(err));
+
+  };
+
+
+  setMatch = id => {
+    API.matchUser(id)
+      .then(res => this.releaseMatch())
       .catch(err => console.log(err));
   };
 
-//  setMatch = id => {
-//    // Filter this.state.dates for dates with an id not equal to the id being removed
-//    const dates = this.state.dates.filter(date => date.id !== id);
-//    // Set this.state.dates equal to the new dates array
-//    this.setState({ dates });
-//  };
-//  releaseMatch = id => {
-//    // Filter this.state.dates for dates with an id not equal to the id being removed
-//    const dates = this.state.dates.filter(date => date.id !== id);
-//    // Set this.state.dates equal to the new dates array
-//    this.setState({ dates });
-//  };
+  releaseMatch = id => {
+    API.deleteUser(id)
+      .then(res => this.loadUsers())
+      .catch(err => console.log(err));
+  };
   // Map over this.state.dates and render a FriendCard component for each date object
   render() {
     return (     
       <Title>
-        {this.state.dates.map(match => (
-          <DateApp
-            setMatch={this.setMatch} 
-            releaseMatch={this.releaseMatch}           
-            key={match._id}
-            id={match._id}
-            image={match.image}    
-            name={match.firstName}
-            age={match.age}
-            neighborhood={match.neighborhood}
-            />
+      {this.state.dates.map(match => (
+        <DateApp
+          setMatch={this.setMatch}  
+          releaseMatch={this.releaseMatch}           
+          key={match._id}
+          id={match._id}
+          image={match.image}    
+          name={match.firstName}
+          age={match.age}
+          neighborhood={match.neighborhood}
+          />
       ))}
-      </Title>       
+      </Title>    
     );
   }
 }
@@ -70,3 +73,17 @@ export default DateCard;
 
 
 
+//<Title>
+//{this.state.dates.map(match => (
+//  <DateApp
+//    setMatch={this.setMatch} 
+//    releaseMatch={this.releaseMatch}           
+//    key={match._id}
+//    id={match._id}
+//    image={match.image}    
+//    name={match.firstName}
+//    age={match.age}
+//    neighborhood={match.neighborhood}
+//    />
+//))}
+//</Title> 

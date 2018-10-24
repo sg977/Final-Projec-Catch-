@@ -34,5 +34,10 @@
 .card {
   background-color: bisque;
   width: 250px;
+}
 
+.msgs-disp {
+  height: 350px;
+  width: 300px;
+  overflow: scroll;
 }

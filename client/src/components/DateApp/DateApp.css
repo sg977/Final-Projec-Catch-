@@ -8,11 +8,13 @@
 div {
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: darkblue;
+    color: royalblue;
 }
     
 ul {
     list-style: none;
+    color:royalblue;
+    text-align: center;
   }
 
 

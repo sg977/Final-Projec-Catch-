@@ -1,4 +1,4 @@
-@media all and (min-width: 480px) {
+/* @media all and (min-width: 480px) { */
     .Login {
       padding: 0px;
     }
@@ -8,4 +8,4 @@
       margin: 0 auto;
       max-width: 320px;
     }
-  }
+  /* } */

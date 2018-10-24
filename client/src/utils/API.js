@@ -16,18 +16,32 @@ export default {
   // Saves a book to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
+  },
+
+  matchUser: function(id) {
+    return axios.post("/api/matches" + id);
+  }, 
+
+  deleteMatch: function(id) {
+    return axios.delete("/api/matches/" + id);
+  },
+
+  getMatches: function() {
+    return axios.get("/api/matches");
+  },
+
+  getRoom: function(id) {
+    return axios.get("/api/chats/" + id);
+  },
+  // updateChat: function(id, message, hook) {
+  //   return axios.post("/api/chats" + id, message, hook)
+  // }
+  addMessage: function(id, message) {
+    return axios.post("/api/chats/" + id, message)
+  },
+  changeStatus: function(id, hook) {
+    return axios.put("/api/chats/" + id, hook)
   }
+
 };
 
-
-// export default {
-//   getRoom: function() {
-//     return axios.get("/api/rooms");
-//   },
-//   addMessage: function(message) {
-//     return axios.post("/api/rooms/" + id, message)
-//   },
-//   changeStatus: function(hook){
-//     return axios.update("/api/rooms/" + id, hook)
-//   }
-// }

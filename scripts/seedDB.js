@@ -10,18 +10,6 @@ mongoose.connect(
 
 const userSeed = [
   {
-    email: "erica@fakemail.com",
-    password: "password",
-    firstName: "Erica",
-    lastName: "Howard",
-    image: "https://s.abcnews.com/images/Entertainment/bachelor-contestants-chelsea-abc-jef-171211_2x3_1600.jpg",
-    age: 25,
-    neighborhood: "Northern Liberties",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now())
-  },
-  {
     email: "alicia@fakemail.com",
     password: "password",
     firstName: "Alicia",
@@ -31,7 +19,9 @@ const userSeed = [
     neighborhood: "Fishtown",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "sarah@fakemail.com",
@@ -43,7 +33,9 @@ const userSeed = [
     neighborhood: "Fairmount",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: false
   },
   {
     email: "katie@fakemail.com",
@@ -55,7 +47,9 @@ const userSeed = [
     neighborhood: "Old City",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: false
   },
   {
     email: "christina@fakemail.com",
@@ -67,7 +61,9 @@ const userSeed = [
     neighborhood: "Center City",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "erin@fakemail.com",
@@ -79,8 +75,10 @@ const userSeed = [
     neighborhood: "South Philly",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
-  },
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: false
+  }, 
   {
     email: "veronica@fakemail.com",
     password: "password",
@@ -91,7 +89,9 @@ const userSeed = [
     neighborhood: "South Philly",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: true
   },
   {
     email: "chelsea@fakemail.com",
@@ -103,7 +103,9 @@ const userSeed = [
     neighborhood: "Northern Liberties",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "megan@fakemail.com",
@@ -115,7 +117,9 @@ const userSeed = [
     neighborhood: "Fishtown",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "vanessa@fakemail.com",
@@ -127,7 +131,9 @@ const userSeed = [
     neighborhood: "Center City",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: false
   },
   {
     email: "joanne@fakemail.com",
@@ -139,7 +145,9 @@ const userSeed = [
     neighborhood: "Old City",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "rachel@fakemail.com",
@@ -151,26 +159,30 @@ const userSeed = [
     neighborhood: "Northeast",
     gender: "Female",
     genderInterest: "Male",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "john@fakemail.com",
     password: "password",
     firstName: "John",
     lastName: "Howard",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136969/e10036f0412ab1099c50284275ab045f/1000x400-Q90_e10036f0412ab1099c50284275ab045f.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1359-1526654295.jpg?crop=1.00xw:0.668xh;0,0.0991xh",
     age: 25,
     neighborhood: "Northern Liberties",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "brian@fakemail.com",
     password: "password",
     firstName: "Brian",
     lastName: "Silver",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136973/48c4249219eeb9a0cdd7543432d28d83/1000x400-Q90_48c4249219eeb9a0cdd7543432d28d83.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-0041-1526654751.jpg?crop=1.00xw:0.668xh;0,0.0438xh",
     age: 28,
     neighborhood: "Fishtown",
     gender: "Male",
@@ -182,120 +194,140 @@ const userSeed = [
     password: "password",
     firstName: "Shane",
     lastName: "Stevens",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136975/1f76fcb9206d66c6e6d73e443577af2f/1000x400-Q90_1f76fcb9206d66c6e6d73e443577af2f.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1546-1526655291.jpg?crop=1.00xw:0.668xh;0,0.0588xh",
     age: 32,
     neighborhood: "Fairmount",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "nelson@fakemail.com",
     password: "password",
     firstName: "Nelson",
     lastName: "Griffin",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136976/6d97a1a49631757e7c9fdf4a2bbf9000/1000x400-Q90_6d97a1a49631757e7c9fdf4a2bbf9000.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1491-1526655420.jpg?crop=1.00xw:0.668xh;0,0.0772xh",
     age: 22,
     neighborhood: "Old City",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "zack@fakemail.com",
     password: "password",
     firstName: "Zack",
     lastName: "Mesa",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136978/cce918b10c5d35e9009074ea5dd0240b/1000x400-Q90_cce918b10c5d35e9009074ea5dd0240b.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-0915-1526656606.jpg?crop=1.00xw:0.668xh;0,0.0703xh&resize=640:*",
     age: 27,
     neighborhood: "Center City",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "jake@fakemail.com",
     password: "password",
     firstName: "Jake",
     lastName: "Black",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136979/30ed56e54f74885d5e1451236301c709/1000x400-Q90_30ed56e54f74885d5e1451236301c709.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1594-1526656911.jpg?crop=1.00xw:0.668xh;0,0.0829xh&resize=640:*",
     age: 25,
     neighborhood: "South Philly",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "blake@fakemail.com",
     password: "password",
     firstName: "Blake",
     lastName: "Mars",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136980/7d02610a2548d240b380fc19a713a698/1000x400-Q90_7d02610a2548d240b380fc19a713a698.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1193-1526657181.jpg?crop=1.00xw:0.668xh;0,0.0657xh&resize=640:*",
     age: 26,
     neighborhood: "South Philly",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "jared@fakemail.com",
     password: "password",
     firstName: "Jared",
     lastName: "Grey",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136982/6cc3b10c69196c89966800f22496b859/1000x400-Q90_6cc3b10c69196c89966800f22496b859.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1078-1526657726.jpg?crop=1.00xw:0.668xh;0,0.0657xh&resize=640:*",
     age: 33,
     neighborhood: "Northern Liberties",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "scott@fakemail.com",
     password: "password",
     firstName: "Scott",
     lastName: "Fulton",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136983/1ddabff2f57f434e8e804316fd30a5c3/1000x400-Q90_1ddabff2f57f434e8e804316fd30a5c3.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-0462-1526663118.jpg?crop=1.00xw:0.668xh;0,0.0403xh&resize=640:*",
     age: 24,
     neighborhood: "Fishtown",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "will@fakemail.com",
     password: "password",
     firstName: "Will",
     lastName: "Quinn",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136984/88632fc509d5fc4789437ba866af40ea/1000x400-Q90_88632fc509d5fc4789437ba866af40ea.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-0620-1526663206.jpg?crop=1.00xw:0.668xh;0,0.111xh",
     age: 31,
     neighborhood: "Center City",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "grant@fakemail.com",
     password: "password",
     firstName: "Grant",
     lastName: "Jones",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136986/68619ce45c5b99376262543c775d046c/1000x400-Q90_68619ce45c5b99376262543c775d046c.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1124-1526663252.jpg?crop=1.00xw:0.668xh;0,0.0622xh",
     age: 27,
     neighborhood: "Old City",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   },
   {
     email: "jeff@fakemail.com",
     password: "password",
     firstName: "Jeff",
     lastName: "Smith",
-    image: "https://cdn1.edgedatg.com/aws/v2/abc/TheBachelorette/person/2136987/943c3b5313a037e53a95c00d763eb8d7/1000x400-Q90_943c3b5313a037e53a95c00d763eb8d7.jpg",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-0494-1526663287.jpg?crop=1.00xw:0.668xh;0,0.0622xh",
     age: 28,
     neighborhood: "Northeast",
     gender: "Male",
     genderInterest: "Female",
-    date: new Date(Date.now())
+    date: new Date(Date.now()),
+    matched: false,
+    hooked: false
   }  
 ];
 
@@ -320,6 +352,51 @@ const messageSeed = [
   }
 ];
 
+const matchSeed = [
+  {
+    email: "erica@fakemail.com",
+    password: "password",
+    firstName: "Erica",
+    lastName: "Howard",
+    image: "https://s.abcnews.com/images/Entertainment/bachelor-contestants-chelsea-abc-jef-171211_2x3_1600.jpg",
+    age: 25,
+    neighborhood: "Northern Liberties",
+    gender: "Female",
+    genderInterest: "Male",
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: false
+  },
+  {
+    email: "jessica@fakemail.com",
+    password: "password",
+    firstName: "Jessica",
+    lastName: "Ryan",
+    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-lauren-g-abc-jef-171211_2x3_1600.jpg",
+    age: 25,
+    neighborhood: "Old City",
+    gender: "Female",
+    genderInterest: "Male",
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: false
+  },
+  {
+    email: "kerry@fakemail.com",
+    password: "password",
+    firstName: "Kerry",
+    lastName: "Green",
+    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-amber-abc-jef-171211_2x3_1600.jpg",
+    age: 25,
+    neighborhood: "Grad Hospital",
+    gender: "Female",
+    genderInterest: "Male",
+    date: new Date(Date.now()),
+    matched: true,
+    hooked: true
+  }    
+];
+
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
@@ -335,6 +412,18 @@ db.User
   db.Chat
   .remove({})
   .then(() => db.Chat.collection.insertMany(messageSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  db.Match
+  .remove({})
+  .then(() => db.Match.collection.insertMany(matchSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

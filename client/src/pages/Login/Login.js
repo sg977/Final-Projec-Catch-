@@ -24,6 +24,7 @@ class FormsPage extends React.Component  {
               </div>
               <div className="text-center">
                 <Button>Login</Button>
+                <Button>Sign Up</Button>
               </div>
             </form>
             
