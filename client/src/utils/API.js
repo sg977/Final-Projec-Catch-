@@ -16,6 +16,18 @@ export default {
   // Saves a book to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
+  },
+  getRoom: function(id) {
+    return axios.get("/api/chats/" + id);
+  },
+  // updateChat: function(id, message, hook) {
+  //   return axios.post("/api/chats" + id, message, hook)
+  // }
+  addMessage: function(id, message) {
+    return axios.post("/api/chats/" + id, message)
+  },
+  changeStatus: function(id, hook) {
+    return axios.put("/api/chats/" + id, hook)
   }
 };
 
