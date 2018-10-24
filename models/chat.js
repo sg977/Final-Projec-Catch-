@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const chatSchema = new Schema({
-    userOne: { type: String, required: true },
-    userTwo: { type: String, required: true },
-    hooked: { type: Boolean, required: true },
+    userOne: { type: String, default: "one_blank" },
+    userTwo: { type: String, default: "two_blank" },
+    hooked: { type: Boolean, default: false },
     messages: [{
         text: { type: String, required: true },
         senderID: { type: String, required: true },

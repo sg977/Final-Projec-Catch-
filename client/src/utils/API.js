@@ -30,17 +30,18 @@ export default {
     return axios.get("/api/matches");
   },
 
+  getRoom: function(id) {
+    return axios.get("/api/chats/" + id);
+  },
+  // updateChat: function(id, message, hook) {
+  //   return axios.post("/api/chats" + id, message, hook)
+  // }
+  addMessage: function(id, message) {
+    return axios.post("/api/chats/" + id, message)
+  },
+  changeStatus: function(id, hook) {
+    return axios.put("/api/chats/" + id, hook)
+  }
+
 };
 
-
-// export default {
-//   getRoom: function() {
-//     return axios.get("/api/rooms");
-//   },
-//   addMessage: function(message) {
-//     return axios.post("/api/rooms/" + id, message)
-//   },
-//   changeStatus: function(hook){
-//     return axios.update("/api/rooms/" + id, hook)
-//   }
-// }
