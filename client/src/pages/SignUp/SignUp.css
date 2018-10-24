@@ -1,11 +1,21 @@
-Container {
+
+
+Header {
     width: 100%;
-    height: 100%
+    height: auto;
+    padding: 0;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Card {
-    width: 5000px;
-} */
+Container {
+    width: 100%;
+    height: 100%;
+   
+}
+
+
 
 form {
     padding: 40px; 
@@ -25,4 +35,9 @@ Footer {
 
 .inline {
     display: inline
+}
+
+.custom-select {
+    margin-bottom: 20px;
+
 }

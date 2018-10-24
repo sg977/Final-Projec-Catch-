@@ -10,8 +10,10 @@ import { Container, Row, Col, Input, Button } from 'mdbreact';
 class FormsPage extends React.Component  {
   render() {
     return(
+      <div>
+              <Header />
       <Container>
-        <Header />
+  
         <Row>
           <Col md="6">
             <form>
@@ -28,9 +30,11 @@ class FormsPage extends React.Component  {
           </Col>
           
         </Row>
-        <Footer />
+        
         
       </Container>
+      <Footer />
+      </div>
 
     );
   }

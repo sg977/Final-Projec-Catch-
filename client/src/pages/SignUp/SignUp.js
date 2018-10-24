@@ -5,6 +5,7 @@ import ImageUpload from "../../components/ImageTesting";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Select from "../../components/Select";
+import Select1 from "../../components/Select1";
 import "./SignUp.css";
 
 
@@ -59,8 +60,13 @@ class FormsPage extends React.Component  {
 
   render() {
     return(
+      <div>
+
       <Container>
-        <Header />
+
+          <Header />
+
+    
         <Row>
           <Col lg="12">
             {/* <Card>
@@ -71,27 +77,16 @@ class FormsPage extends React.Component  {
                     
                   
                     <Input label="First Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Last Name" icon="none" group type="text" validate error="wrong" success="right"/>
-                
-          
+                    <Input label="Last Name" icon="user" group type="text" validate error="wrong" success="right"/>
+                    <Input label="Age" icon="address-book-o" group type="number" validate error="wrong" success="right" />
+                    <Input label="Neighborhood" icon="address-card" group type="text" validate error="wrong" success="right" /> 
                     
-                    <Input label="Gender" icon="female" group type="text" validate error="wrong" success="right" />
-                    <Col>
-                    <Input label="Gender Preference" icon="female" />
-                    <label icon="male">
-                      Gender Preference 
                     <Select />
-                    </label>
-                    </Col>
-           
-                    
-                    
-        
-                    <Input label="Age" icon="user" group type="number" validate error="wrong" success="right" />
-                    <Input label="Neighborhood" icon="user" group type="text" validate error="wrong" success="right" /> 
+                    <Select1 />
                     <Input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
                     <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right"/>
                     <Input label="Your password" icon="lock" group type="password" validate/>
+                    <Input label="Confirm your password" icon="key" group type="password" validate error="wrong" success="right"/>
 
                     <ImageUpload />
                   </div>
@@ -102,22 +97,15 @@ class FormsPage extends React.Component  {
               {/* </CardBody>
  
             </Card> */}
-            <Footer />
+            
           </Col>
-        </Row>
-
-        <Row>
-
-        <Col lg="12">
-
-    
-
-        </Col>
-
         </Row>
 
        
       </Container>
+
+<Footer />
+</div>
       
 
 
