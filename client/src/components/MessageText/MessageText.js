@@ -5,7 +5,12 @@ const MessageText = props => (
     <div>
         <form>
             <input
-                type="text" className="form-control" value={props.inputText} onChange={props.messageInput}>
+                value={props.inputText}
+                onChange={props.messageInput}
+                onSubmit={() => props.handleSend()}
+                type="text"
+                className="form-control" 
+                >
             </input>
         </form>
     </div>

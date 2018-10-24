@@ -26,10 +26,19 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    addMessage: function(req, res) {
+   addMessage: function(req, res) {
+        db.Chat
+            .update(
+                { _id: req.params.id },
+                { $push: { messages: req.body } }
+            )
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
+    updateStatus: function(req, res) {
         db.Chat
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err))
+            .catch(err => res.status(422).json(err)); 
     }
 };

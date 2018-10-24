@@ -20,6 +20,9 @@ export default {
   getRoom: function(id) {
     return axios.get("/api/chats/" + id);
   },
+  // updateChat: function(id, message, hook) {
+  //   return axios.post("/api/chats" + id, message, hook)
+  // }
   addMessage: function(id, message) {
     return axios.post("/api/chats/" + id, message)
   },
