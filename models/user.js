@@ -11,7 +11,9 @@ const userSchema = new Schema({
   neighborhood: { type: String, required: true },
   gender: { type: String, required: true },
   genderInterest: { type: String, required: true },
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now },
+  matched: { type: Boolean, required: true },
+  hooked: { type: Boolean, required: true }
 });
 
 const User = mongoose.model("User", userSchema);

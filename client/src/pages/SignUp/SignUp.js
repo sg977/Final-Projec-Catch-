@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Input,Button, Card, CardBody, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { Container, Row, Col, Input, Button, Card, CardBody } from 'mdbreact';
 import API from "../../utils/API";
 import ImageUpload from "../../components/ImageTesting";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Select from "../../components/Select";
-import "./SignUp.css";
-
 
 
 
@@ -25,7 +21,9 @@ class FormsPage extends React.Component  {
       neighborhood: "",
       gender: "",
       genderInterest: "",
-      date: ""
+      date: "",
+      matched: false,
+      hooked: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -52,7 +50,9 @@ class FormsPage extends React.Component  {
         neighborhood: this.state.neighborhood,
         gender: this.state.gender,
         genderInterest: this.state.genderInterest,
-        date: new Date(Date.now())
+        date: new Date(Date.now()),
+        matched: this.state.matched,
+        hooked: this.state.hooked
       })
     
   };
@@ -60,38 +60,23 @@ class FormsPage extends React.Component  {
   render() {
     return(
       <Container>
-        <Header />
         <Row>
           <Col lg="12">
-            {/* <Card>
-              <CardBody> */}
+            <Card>
+              <CardBody>
                 <form>
                   <p className="h4 text-center py-4">Sign up</p>
                   <div className="grey-text">
-                    
-                  
-                    <Input label="First Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Last Name" icon="none" group type="text" validate error="wrong" success="right"/>
-                
-          
-                    
-                    <Input label="Gender" icon="female" group type="text" validate error="wrong" success="right" />
-                    <Col>
-                    <Input label="Gender Preference" icon="female" />
-                    <label icon="male">
-                      Gender Preference 
-                    <Select />
-                    </label>
-                    </Col>
-           
-                    
-                    
-        
-                    <Input label="Age" icon="user" group type="number" validate error="wrong" success="right" />
-                    <Input label="Neighborhood" icon="user" group type="text" validate error="wrong" success="right" /> 
-                    <Input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
-                    <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Your password" icon="lock" group type="password" validate/>
+    
+                    <Input label="First Name" name="firstName" icon="user" group type="text" validate error="wrong" success="right" value={this.state.firstName} onChange={this.handleInputChange}/>
+                    <Input label="Last Name" name="lastName" icon="user" group type="text" validate error="wrong" success="right" value={this.state.lastName} onChange={this.handleInputChange}/>
+                    <Input label="Gender" name="gender" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange}/>
+                    <Input label="Gender preference" name="genderInterest" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Age" name="age" icon="user" group type="number" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Neighborhood" name="neighborhood" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} /> 
+                    <Input label="Your email" name="email" icon="envelope" group type="email" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Your password" name="password" icon="lock" group type="password" validate onChange={this.handleInputChange} />
 
                     <ImageUpload />
                   </div>
@@ -99,10 +84,8 @@ class FormsPage extends React.Component  {
                     <Button color="cyan" type="submit" raised to="/dates" onClick={this.handleFormSubmit}>Register</Button>
                   </div>
                 </form>
-              {/* </CardBody>
- 
-            </Card> */}
-            <Footer />
+              </CardBody>
+            </Card>
           </Col>
         </Row>
 
@@ -110,7 +93,7 @@ class FormsPage extends React.Component  {
 
         <Col lg="12">
 
-    
+        <Footer />
 
         </Col>
 

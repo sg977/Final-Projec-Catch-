@@ -16,7 +16,20 @@ export default {
   // Saves a book to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
-  }
+  },
+
+  matchUser: function(id) {
+    return axios.post("/api/matches" + id);
+  }, 
+
+  deleteMatch: function(id) {
+    return axios.delete("/api/matches/" + id);
+  },
+
+  getMatches: function() {
+    return axios.get("/api/matches");
+  },
+
 };
 
 
