@@ -28,7 +28,7 @@ class InstantMessage extends Component {
 
   componentDidMount() {
     console.log("Component Mounted");
-        this.loadRoomData();
+    this.loadRoomData();
   }
 
   loadRoomData = () => {
