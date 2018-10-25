@@ -33,11 +33,19 @@
 
 .card {
   background-color: bisque;
-  width: 250px;
+  width: 75%;
+}
+
+.partner-disp {
+  width: 100%;
 }
 
 .msgs-disp {
+  width: 80%;
   height: 350px;
-  width: 300px;
   overflow: scroll;
+}
+
+.btn {
+  width: 77%;
 }

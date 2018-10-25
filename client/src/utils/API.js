@@ -30,6 +30,14 @@ export default {
     return axios.get("/api/matches");
   },
 
+  newMatch: function(id, data) {
+    return axios.post("/api/chats/" + id, {email: data})
+  },
+
+  updateMatch: function(id, match) {
+    return axios.put("/api/chats/" + id, match)
+  },
+
   getRoom: function(id) {
     return axios.get("/api/chats/" + id);
   },

@@ -26,10 +26,18 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    // updateRoom: function(req, res) {
+    //     db.Chat
+    //         .update(
+    //             { _id: req.params.id }, req.body
+    //         )
+    // },
    addMessage: function(req, res) {
         db.Chat
-            .update(
+            .findByIdAndUpdate(
                 { _id: req.params.id },
+                    //userOne: req.body.email },
+
                 { $push: { messages: req.body } }
             )
             .then(dbModel => res.json(dbModel))
