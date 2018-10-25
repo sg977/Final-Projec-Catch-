@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Notifications, {notify} from "react-notify-toast";
 import Landing from "./pages/Landing";
 import DateCard from "./pages/DateCard";
@@ -59,7 +59,6 @@ class App extends Component {
         {this.state.hooked ? 
         (
           <div>
-            <Switch>
               <Route exact path="/" component={InstantMessage} />
               <Route exact path="/login" component={InstantMessage} />
               <Route exact path="/signup" component={InstantMessage} />
@@ -67,11 +66,9 @@ class App extends Component {
               <Route exact path="/matches" component={InstantMessage} />
               <Route exact path="/profile" component={InstantMessage} />
               <Route exact path="/chat" component={InstantMessage} />
-            </Switch>
           </div>
         ) : (
           <div>
-            <Switch>
               <Route exact path="/" component={Landing} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
@@ -79,7 +76,6 @@ class App extends Component {
               <Route exact path="/matches" component={MatchCard} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/chat" component={InstantMessage} />
-            </Switch>
           </div>
         
         )
