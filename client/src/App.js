@@ -60,12 +60,12 @@ class App extends Component {
         (
           <div>
             <Switch>
-              <Route exact path="/" component={InstantMessage} />
-              <Route exact path="/login" component={InstantMessage} />
-              <Route exact path="/signup" component={InstantMessage} />
-              <Route exact path="/dates" component={InstantMessage} />
-              <Route exact path="/matches" component={InstantMessage} />
-              <Route exact path="/profile" component={InstantMessage} />
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/dates" component={DateCard} />
+              <Route exact path="/matches" component={MatchCard} />
+              <Route exact path="/profile" component={Profile} />
               <Route exact path="/chat" component={InstantMessage} />
             </Switch>
           </div>

@@ -1,7 +1,8 @@
 .title {
+
   width: 100%;
   text-align: center;
-  margin-top: 200px;
+
 
 }
 
@@ -9,11 +10,17 @@
   align-content: center;
 } */
 
+#collector {
+  margin-top: 30px;
+  margin-right: 120px;
+}
 #people {
   margin-bottom: 15px;
   text-align: center;
   margin-left: 150px;
 }
+
+
 
 DateApp {
   padding-left: 1000%;

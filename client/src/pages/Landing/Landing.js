@@ -17,10 +17,12 @@ class Landing extends React.Component  {
             <p>I Kinda Wanna Be</p>
             <p> More Than Just Friends</p>
              </div>
+            <Col sm="6"> 
             <div id="buttons">
             <Button color="primary">Login</Button>
             <Button>Sign Up</Button>
             </div>
+            </Col>
         <div id="logo">
         <img src={Logo} />
         </div>

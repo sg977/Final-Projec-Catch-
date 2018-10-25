@@ -100,7 +100,7 @@ class FormsPage extends React.Component  {
 
                   </div>
                   <div className="text-center py-4 mt-3">
-                    <Button color="cyan" type="submit" raised to="/dates" onClick={this.handleFormSubmit}>Register</Button>
+                    <Button type="submit" raised to="/dates" onClick={this.handleFormSubmit}>Register</Button>
                   </div>
                 </form>
                 </div>

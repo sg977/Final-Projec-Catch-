@@ -1,9 +1,12 @@
-import React from "react";
+import React, {Components} from "react";
 import "./Profile.css";
 
+
+
 const Profile = props => (  
-    <div id="people">
     
+    <div id="people">
+        
         <div className="card">
         <span className="border border-success">
             <div className="img-container">
@@ -30,8 +33,11 @@ const Profile = props => (
             </div>
             </span>
         </div>
+
+    
         
     </div>
+  
 
 );
 

@@ -53,19 +53,19 @@
 	font-weight: 10000;
 	text-align: center;
 	position: absolute;
-	top: 40%;
+	top: 10%;
 	margin-left: 100px;
 	/* right: 0;
 	left: 0; */
 }
 
  #subtitle {
-	font-weight: 500px;
+	font-weight: 200;
 	font-family: 'Caveat', cursive;
 	font-size: 300%;
 	text-align: center;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	margin-left: 20px;
 	
 	/* right: 0;
@@ -81,6 +81,9 @@
 }
 
 #buttons {
-	margin-left: 100px; 
+	margin-top: 400px;
+	margin-left: 100px;
+	position:absolute;
+	 
 
 }

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import DateApp from "../../components/DateApp";
 import TitleUser from "../../components/TitleUser";
 import API from "../../utils/API";
@@ -42,7 +44,12 @@ class Profile extends Component {
   };
   // Map over this.state.dates and render a FriendCard component for each date object
   render() {
-    return (     
+    return ( 
+      <div>
+        <Header /> 
+
+      <div id="holder"> 
+        
       <TitleUser>
       {this.state.dates.map(match => (
         <DateApp           
@@ -56,7 +63,11 @@ class Profile extends Component {
           genderInterest={match.genderInterest}
           />
       ))}
-      </TitleUser>    
+      </TitleUser> 
+      
+      </div>  
+      <Footer />
+      </div> 
     );
   }
 }

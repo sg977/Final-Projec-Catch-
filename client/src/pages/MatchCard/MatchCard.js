@@ -67,6 +67,7 @@ class MatchCard extends Component {
   render() {
     return (  
       <div>
+      <div>
       <Header /> 
         
       <TitleMatch>
@@ -87,10 +88,12 @@ class MatchCard extends Component {
       </TitleMatch> 
       <div class="push"></div>
       <div class="footer">
-      <Footer /> 
+       
       </div>
 
-      </div>  
+      </div> 
+      <Footer /> 
+      </div>
     );
   }
 }
