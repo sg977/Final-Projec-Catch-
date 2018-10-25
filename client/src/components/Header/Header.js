@@ -28,22 +28,20 @@ class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem active>
-                              <NavLink to="#">Home</NavLink>
+                              <NavLink to="/dates">Dates</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="#">Direct Message</NavLink>
-                          </NavItem>
+                              <NavLink to="/matches">Matches</NavLink>
+                          </NavItem>                         
                           <NavItem>
-                              <NavLink to="#">Logout</NavLink>
+                              <NavLink to="/chat">Direct Message</NavLink>
                           </NavItem>
                           <NavItem>
                             <Dropdown>
                                 <DropdownToggle nav caret>Dropdown</DropdownToggle>
                                 <DropdownMenu>
-                                    <DropdownItem href="#">Action</DropdownItem>
-                                    <DropdownItem href="#">Another Action</DropdownItem>
-                                    <DropdownItem href="#">Something else here</DropdownItem>
-                                    <DropdownItem href="#">Something else here</DropdownItem>
+                                    <DropdownItem href="/signup">Signup</DropdownItem>
+                                    <DropdownItem href="/profile">Settings</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
                           </NavItem>

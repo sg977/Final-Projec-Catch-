@@ -15,8 +15,6 @@ import API from "./utils/API";
 
 
 
-class App extends Component {
-
   state = {
     room: "5bd16c99b837b3d9cb5c2ff6",
     hooked: true
@@ -66,7 +64,7 @@ class App extends Component {
               <Route exact path="/signup" component={InstantMessage} />
               <Route exact path="/dates" component={InstantMessage} />
               <Route exact path="/matches" component={InstantMessage} />
-              <Route exact path="/matches" component={InstantMessage} />
+              <Route exact path="/profile" component={InstantMessage} />
               <Route exact path="/chat" component={InstantMessage} />
             </Switch>
           </div>
@@ -78,7 +76,7 @@ class App extends Component {
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/dates" component={DateCard} />
               <Route exact path="/matches" component={MatchCard} />
-              <Route exact path="/matches" component={Profile} />
+              <Route exact path="/profile" component={Profile} />
               <Route exact path="/chat" component={InstantMessage} />
             </Switch>
           </div>
