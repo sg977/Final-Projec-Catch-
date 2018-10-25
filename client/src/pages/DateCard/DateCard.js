@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import { Container, Row, Col, Input, Button, Card, CardBody } from 'mdbreact';
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import DateApp from "../../components/DateApp";
 import Title from "../../components/Title";
 import API from "../../utils/API";
 import "./DateCard.css";
+
 
 class DateCard extends Component {
   // Setting this.state.dates to the dates json array
@@ -47,7 +51,13 @@ class DateCard extends Component {
   };
   // Map over this.state.dates and render a FriendCard component for each date object
   render() {
-    return (     
+    return (  
+      <div>
+        <Header />
+        <Container>
+      <Row>
+            <Col lg="12" id="collector">
+
       <Title>
       {this.state.dates.map(match => (
         <DateApp
@@ -61,7 +71,18 @@ class DateCard extends Component {
           neighborhood={match.neighborhood}
           />
       ))}
-      </Title>    
+      </Title> 
+      <Footer />
+      
+      </Col>
+      </Row>
+
+      </Container>
+<Row>
+      
+</Row>
+
+      </div>  
     );
   }
 }
