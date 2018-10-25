@@ -23,7 +23,7 @@ class Header extends React.Component {
         return (
             <Router>
                 <Navbar color="indigo" dark expand="lg-12" scrolling>
-                        <img id="logo" src="https://images-na.ssl-images-amazon.com/images/I/31ddmNBX-BL._SX355_.jpg" />
+                        
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>

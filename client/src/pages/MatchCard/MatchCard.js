@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { Container, Row, Col, Input, Button, Card, CardBody } from 'mdbreact';
 import MatchApp from "../../components/MatchApp";
 import TitleMatch from "../../components/TitleMatch";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import "./MatchCard.css";
 
@@ -62,7 +65,10 @@ class MatchCard extends Component {
   };
   // Map over this.state.dates and render a FriendCard component for each date object
   render() {
-    return (     
+    return (  
+      <div>
+      <Header /> 
+        
       <TitleMatch>
         {console.log(this.state)}
       {this.state.dates.map(match => (
@@ -78,7 +84,13 @@ class MatchCard extends Component {
           email={match.email}
           />
       ))}
-      </TitleMatch>    
+      </TitleMatch> 
+      <div class="push"></div>
+      <div class="footer">
+      <Footer /> 
+      </div>
+
+      </div>  
     );
   }
 }
@@ -90,17 +102,3 @@ export default MatchCard;
 
 
 
-//<Title>
-//{this.state.dates.map(match => (
-//  <DateApp
-//    setMatch={this.setMatch} 
-//    releaseMatch={this.releaseMatch}           
-//    key={match._id}
-//    id={match._id}
-//    image={match.image}    
-//    name={match.firstName}
-//    age={match.age}
-//    neighborhood={match.neighborhood}
-//    />
-//))}
-//</Title> 

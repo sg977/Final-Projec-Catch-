@@ -1,0 +1,29 @@
+
+
+.user-pic {
+    width: 300px;
+    height: 400px;
+}
+
+div {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: royalblue;
+}
+    
+ul {
+    list-style: none;
+    color:royalblue;
+    text-align: center;
+  }
+
+
+.btn-danger { 
+    justify-content: center;
+    margin: 5px;
+}
+
+.btn-primary {
+    justify-content: center;
+    margin: 5px;
+}
