@@ -20,7 +20,7 @@ class InstantMessage extends Component {
     user: 1,
     partnerID: "Chat with Jenny",
     parterName: "",
-    room: "5bd100b3729fb2ca8dc4197c",
+    room: "5bd16c99b837b3d9cb5c2ff6",
     hooked: null,
     newChat: null,
     chat: []
@@ -124,6 +124,7 @@ class InstantMessage extends Component {
                 )
             )}
           </div>
+          <div className="input-area">
             <MessageText
               value={this.state.inputText}
               messageInput={this.messageInput}
@@ -142,6 +143,7 @@ class InstantMessage extends Component {
                   />
                 )}
                 {console.log(this.state.parterName)}
+              </div>
         </div>
       </div>
     );
