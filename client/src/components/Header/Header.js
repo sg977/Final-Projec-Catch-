@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "./Header.css";
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 class Header extends React.Component {
     constructor(props) {
@@ -28,7 +27,7 @@ class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem active>
-                              <NavLink to="/dates">Dates</NavLink>
+                              <NavLink componentClass={Link} href="/dates" to="/dates">Dates</NavLink>
                           </NavItem>
                           <NavItem>
                               <NavLink to="/matches">Matches</NavLink>
@@ -40,8 +39,8 @@ class Header extends React.Component {
                             <Dropdown>
                                 <DropdownToggle nav caret>Dropdown</DropdownToggle>
                                 <DropdownMenu>
-                                    <DropdownItem href="/signup">Signup</DropdownItem>
-                                    <DropdownItem href="/profile">Settings</DropdownItem>
+                                    <DropdownItem to="/signup">Signup</DropdownItem>
+                                    <DropdownItem to="/profile">Settings</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
                           </NavItem>

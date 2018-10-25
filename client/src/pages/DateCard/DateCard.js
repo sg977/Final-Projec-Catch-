@@ -39,8 +39,8 @@ class DateCard extends Component {
 
 
   setMatch = id => {
-    API.matchUser(id)
-      .then(res => this.releaseMatch())
+    API.deleteUser(id)
+      .then(res => this.loadUsers())
       .catch(err => console.log(err));
   };
 
