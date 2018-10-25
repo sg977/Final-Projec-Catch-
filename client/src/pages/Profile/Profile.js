@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DateApp from "../../components/DateApp";
+import ProfileCard from "../../components/ProfileCard";
 import TitleUser from "../../components/TitleUser";
 import API from "../../utils/API";
 import "./Profile.css";
@@ -26,7 +26,7 @@ class Profile extends Component {
   }
 
   loadUsers = () => {
-    API.getUsers()
+    API.getProfile()
       .then(res =>
         this.setState({ dates: res.data, firstName: "", lastName: "", email: "", password: "", image: "", age: "", neighborhood: "", gender: "", genderInterest: "", matched: "", hooked: ""}))
       .catch(err => console.log(err));
@@ -45,7 +45,7 @@ class Profile extends Component {
     return (     
       <TitleUser>
       {this.state.dates.map(match => (
-        <DateApp           
+        <ProfileCard           
           key={match._id}
           id={match._id}
           image={match.image}    

@@ -3,6 +3,7 @@ const usersController = require("../../controllers/usersController");
 
 router.route("/")
   .get(usersController.findGenderInterest)
+  .get(usersController.findProfile)
   .post((req, res) => {
     console.log("in users post")
     console.log(req.body)

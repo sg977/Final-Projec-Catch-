@@ -1,7 +1,7 @@
 import React from "react";
-import "./Profile.css";
+import "./ProfileCard.css";
 
-const Profile = props => (  
+const ProfileCard = props => (  
     <div id="people">
     
         <div className="card">
@@ -36,5 +36,5 @@ const Profile = props => (
 );
 
 
-export default Profile;
+export default ProfileCard;
 
