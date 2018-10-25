@@ -24,160 +24,6 @@ const userSeed = [
     hooked: false
   },
   {
-    email: "sarah@fakemail.com",
-    password: "password",
-    firstName: "Sarah",
-    lastName: "Stevens",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jacqueline-abc-jef-171211_2x3_1600.jpg",
-    age: 32,
-    neighborhood: "Fairmount",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: true,
-    hooked: false
-  },
-  {
-    email: "katie@fakemail.com",
-    password: "password",
-    firstName: "Katie",
-    lastName: "Griffin",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jenna-abc-jef-171211_2x3_1600.jpg",
-    age: 22,
-    neighborhood: "Old City",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: true,
-    hooked: false
-  },
-  {
-    email: "christina@fakemail.com",
-    password: "password",
-    firstName: "Christina",
-    lastName: "Mesa",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jennifer-abc-jef-171211_2x3_1600.jpg",
-    age: 27,
-    neighborhood: "Center City",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: false,
-    hooked: false
-  },
-  {
-    email: "erin@fakemail.com",
-    password: "password",
-    firstName: "Erin",
-    lastName: "Black",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-kendall-abc-jef-171211_2x3_1600.jpg",
-    age: 25,
-    neighborhood: "South Philly",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: true,
-    hooked: false
-  }, 
-  {
-    email: "veronica@fakemail.com",
-    password: "password",
-    firstName: "Veronica",
-    lastName: "Mars",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-jessica-abc-jef-171211_2x3_1600.jpg",
-    age: 26,
-    neighborhood: "South Philly",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: true,
-    hooked: true
-  },
-  {
-    email: "chelsea@fakemail.com",
-    password: "password",
-    firstName: "Chelsea",
-    lastName: "Grey",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-krystal-abc-jef-171211_2x3_1600.jpg",
-    age: 33,
-    neighborhood: "Northern Liberties",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: false,
-    hooked: false
-  },
-  {
-    email: "megan@fakemail.com",
-    password: "password",
-    firstName: "Megan",
-    lastName: "Fulton",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-lauren-s-abc-jef-171211_2x3_1600.jpg",
-    age: 24,
-    neighborhood: "Fishtown",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: false,
-    hooked: false
-  },
-  {
-    email: "vanessa@fakemail.com",
-    password: "password",
-    firstName: "Vanessa",
-    lastName: "Quinn",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-lauren-b-abc-jef-171211_2x3_1600.jpg",
-    age: 31,
-    neighborhood: "Center City",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: true,
-    hooked: false
-  },
-  {
-    email: "joanne@fakemail.com",
-    password: "password",
-    firstName: "Joanne",
-    lastName: "Jones",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-olivia-abc-jef-171211_2x3_1600.jpg",
-    age: 27,
-    neighborhood: "Old City",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: false,
-    hooked: false
-  },
-  {
-    email: "rachel@fakemail.com",
-    password: "password",
-    firstName: "Rachel",
-    lastName: "Smith",
-    image: "http://a.abcnews.com/images/Entertainment/bachelor-contestants-rebekah-abc-jef-171211_2x3_1600.jpg",
-    age: 28,
-    neighborhood: "Northeast",
-    gender: "Female",
-    genderInterest: "Male",
-    date: new Date(Date.now()),
-    matched: false,
-    hooked: false
-  },
-  {
-    email: "john@fakemail.com",
-    password: "password",
-    firstName: "John",
-    lastName: "Howard",
-    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/148893-1359-1526654295.jpg?crop=1.00xw:0.668xh;0,0.0991xh",
-    age: 25,
-    neighborhood: "Northern Liberties",
-    gender: "Male",
-    genderInterest: "Female",
-    date: new Date(Date.now()),
-    matched: false,
-    hooked: false
-  },
-  {
     email: "brian@fakemail.com",
     password: "password",
     firstName: "Brian",
@@ -397,6 +243,12 @@ const matchSeed = [
   }    
 ];
 
+const hookSeed = [
+  {
+    hooked: false
+  }
+]
+
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
@@ -408,8 +260,9 @@ db.User
     console.error(err);
     process.exit(1);
   });
+  
 
-  db.Chat
+db.Chat
   .remove({})
   .then(() => db.Chat.collection.insertMany(messageSeed))
   .then(data => {
@@ -421,9 +274,21 @@ db.User
     process.exit(1);
   });
 
-  db.Match
+db.Match
   .remove({})
   .then(() => db.Match.collection.insertMany(matchSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+db.Hook
+  .remove({})
+  .then(() => db.Hook.collection.insertMany(hookSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

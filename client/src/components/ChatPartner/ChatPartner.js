@@ -2,7 +2,7 @@ import React from 'react';
 import './ChatPartner.css';
 
 const ChatPartner = props => (
-<div className="card received">
+<div className="card partner">
   <div className="card-body">
     {props.partner}
   </div>

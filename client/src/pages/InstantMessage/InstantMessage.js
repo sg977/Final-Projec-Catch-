@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './InstantMessage.css';
 // import msgs from './messages-obj.json';
 import ChatPartner from '../../components/ChatPartner';
@@ -17,46 +18,18 @@ class InstantMessage extends Component {
     messages: [],
     inputText: "",
     user: 1,
-    partnerID: 2,
+    partnerID: "Chat with Jenny",
     parterName: "",
-    room: "",
+    room: "5bd16c99b837b3d9cb5c2ff6",
     hooked: null,
     newChat: null,
     chat: []
   }
 
-  // state = {
-  //   msgs: [],
-  //   messages: [],
-  //   inputText: "",
-  //   user: 1,
-  //   room: 0,
-  //   hooked: false,
-  //   newChat: true
-  // }
-
   componentDidMount() {
     console.log("Component Mounted");
-        this.loadRoomData();
-        this.loadPartnerID();
-        this.loadPartnerName();
-  };
-
-  // loadMessages = (msgs) => {
-  //   for(let i = 0; i < msgs.length; i++) {
-  //     this.state.messages.push(msgs[i]);
-  //   }
-  //   if(msgs.length === 0) {
-  //     this.setState({
-  //       newChat: true
-  //     })
-  //   } else {
-  //     this.setState({
-  //       newChat: false
-  //     })
-  //   }
-  //   console.log(this.state.messages)
-  // }
+    this.loadRoomData();
+  }
 
   loadRoomData = () => {
     API.getRoom(this.state.room)
@@ -64,6 +37,8 @@ class InstantMessage extends Component {
         this.setState({
             messages: res.data[0].messages,
             hooked: res.data[0].hooked,
+            user: res.data[0].userOne,
+            
           }))
           .catch(err => console.log(err));
   };
@@ -98,54 +73,17 @@ class InstantMessage extends Component {
     }
   }
 
-  // recentMessages = (arr) => {
-  //   arr.slice(1).slice(-5)    
-  //   this.setState({ messages: arr })
-  // }
-
-  // loadMessages = () => {
-  //   for(let i = 0; i < msgs.messages.length; i++) {
-  //     this.state.messages.push(msgs[i]);
-  //   }
-  //   if(msgs.length === 0) {
-  //     this.setState({
-  //       newChat: true
-  //     })
-  //   } else {
-  //     this.setState({
-  //       newChat: false
-  //     })
-  //   }
-  //   console.log(this.state.messages)
-  // }
-
   handleSend = () => {
     console.log("msg sent");
-    // this.state.messages.push(
-    //   {
-    //     senderID: this.state.user,
-    //     text: this.state.inputText
-    //   }
-    // )
-    // this.setState({
-    //   messages: this.state.messages,
-    //   inputText: ""
-    // })
-    // console.log(this.state.messages)
-    
-    API.addMessage(this.state.room, {text: this.state.inputText, senderID: this.state.user})
+    API.addMessage(this.state.room, {text: this.state.inputText, senderID: this.state.user});
     this.loadRoomData();
+    console.log(this.state.inputText)
   };
 
   messageInput = event => {
     this.setState({
       inputText: event.target.value
     });
-    // if(this.state.inputText === "") {
-    //   this.setState({
-    //     inputText: ""
-    //   })
-    // }
   }
 
   handleHook = () => {
@@ -167,10 +105,12 @@ class InstantMessage extends Component {
   render() {
     return (
       <div className="App">
-        <div className="card">
-        <ChatPartner 
-          partner={this.state.partnerID}
-        />
+        <div className="card main-disp">
+          <div className="partner-disp">
+            <ChatPartner 
+              partner={this.state.partnerID}
+            />
+            </div>
           <div className="card-body msgs-disp">
             {this.state.messages.map(message => 
                 this.state.user === message.senderID ? (
@@ -184,8 +124,9 @@ class InstantMessage extends Component {
                 )
             )}
           </div>
+          <div className="input-area">
             <MessageText
-              value={this.inputText}
+              value={this.state.inputText}
               messageInput={this.messageInput}
             />
             <SendButton 
@@ -202,6 +143,7 @@ class InstantMessage extends Component {
                   />
                 )}
                 {console.log(this.state.parterName)}
+              </div>
         </div>
       </div>
     );

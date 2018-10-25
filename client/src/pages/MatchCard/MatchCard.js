@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { Container, Row, Col, Input, Button, Card, CardBody } from 'mdbreact';
 import MatchApp from "../../components/MatchApp";
 import TitleMatch from "../../components/TitleMatch";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import "./MatchCard.css";
 
@@ -18,7 +21,9 @@ class MatchCard extends Component {
     gender: "",
     genderInterest: "",
     matched: "",
-    hooked: ""
+    hooked: "",
+    roomID: "",
+    matchEmail: ""
   };
 
   componentDidMount() {
@@ -30,9 +35,28 @@ class MatchCard extends Component {
       .then(res =>
         this.setState({ dates: res.data, firstName: "", lastName: "", email: "", password: "", image: "", age: "", neighborhood: "", gender: "", genderInterest: "", matched: "", hooked: ""}))
       .catch(err => console.log(err));
-
+        
   };
 
+  setMatch = (id, match) => {
+    console.log("match set");
+    console.log(id, match)
+    API.newMatch(id, match)
+      .then(res => 
+        this.setState({
+          roomID: res.data._id,
+          matchEmail: this.state.dates[0].email
+        }))
+        console.log(this.state.roomID)
+        API.changeStatus(this.state.roomID, {userOne: this.state.matchEmail})
+        console.log("updated")
+    // this.updateMatch();
+  };
+
+  updateMatch = () => {
+    API.changeStatus(this.state.roomID, {userOne: this.state.matchEmail})
+    console.log("updated")
+  };
 
   releaseMatch = id => {
     API.deleteMatch(id)
@@ -41,11 +65,15 @@ class MatchCard extends Component {
   };
   // Map over this.state.dates and render a FriendCard component for each date object
   render() {
-    return (     
+    return (  
+      <div>
+      <Header /> 
+        
       <TitleMatch>
+        {console.log(this.state)}
       {this.state.dates.map(match => (
         <MatchApp 
-          releaseMatch={this.releaseMatch}           
+          releaseMatch={this.releaseMatch}       setMatch={this.setMatch}    
           key={match._id}
           id={match._id}
           image={match.image}    
@@ -53,9 +81,16 @@ class MatchCard extends Component {
           surname={match.lastName}
           age={match.age}
           neighborhood={match.neighborhood}
+          email={match.email}
           />
       ))}
-      </TitleMatch>    
+      </TitleMatch> 
+      <div class="push"></div>
+      <div class="footer">
+      <Footer /> 
+      </div>
+
+      </div>  
     );
   }
 }
@@ -67,17 +102,3 @@ export default MatchCard;
 
 
 
-//<Title>
-//{this.state.dates.map(match => (
-//  <DateApp
-//    setMatch={this.setMatch} 
-//    releaseMatch={this.releaseMatch}           
-//    key={match._id}
-//    id={match._id}
-//    image={match.image}    
-//    name={match.firstName}
-//    age={match.age}
-//    neighborhood={match.neighborhood}
-//    />
-//))}
-//</Title> 

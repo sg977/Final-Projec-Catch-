@@ -30,7 +30,13 @@ Footer {
 
 .md-form {
     float: left; 
+  
+    
 
+}
+
+.form {
+    margin-left: 600px;
 }
 
 .inline {
@@ -40,4 +46,8 @@ Footer {
 .custom-select {
     margin-bottom: 20px;
 
+}
+
+.imgPreview {
+    margin-left: -20px;
 }

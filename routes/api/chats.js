@@ -6,6 +6,7 @@ router.route("/")
   .post((req, res) => {
     console.log("in chats post")
     console.log(req.body)
+    chatController.createRoom(req, res)
     // chatController.updateStatus(req._body, res)
   });
 

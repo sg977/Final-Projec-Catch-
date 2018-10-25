@@ -33,11 +33,62 @@
 
 .card {
   background-color: bisque;
-  width: 250px;
+  width: 100%;
+}
+
+.partner-disp {
+  width: 100%;
 }
 
 .msgs-disp {
-  height: 350px;
-  width: 300px;
+  width: 90%;
+  height: 500px;
   overflow: scroll;
+  margin-left: 5%
+}
+
+.main-disp {
+  width: 100%;
+}
+
+.btn {
+  width: 75%;
+}
+
+.partner {
+  width: 100%;
+}
+
+.form-control {
+  width: 75%;
+}
+
+.input-area {
+  align-content: center;
+  width: 500px;
+  margin-left: 15%
+}
+
+.received {
+  background-color: #2eb82e;
+  color: black;
+  font-weight: 100;
+}
+
+.rec-disp {
+  width: 75%;
+  float: left;
+  margin: 5px;
+}
+
+.sent {
+  background-color: #007ae6;
+  color: white;
+  font-weight: 100;
+}
+
+.sent-disp {
+  width: 75%;
+  float: right;
+  margin: 5px;
 }
