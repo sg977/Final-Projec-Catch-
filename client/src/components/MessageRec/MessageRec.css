@@ -1,4 +1,7 @@
 .received {
-    background-color: aqua;
+    background-color: #2eb82e;
     float: left;
+    margin: 5px;
+    color: black;
+    font-weight: 100;
 }
