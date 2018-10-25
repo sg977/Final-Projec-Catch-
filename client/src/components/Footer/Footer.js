@@ -8,11 +8,11 @@ return (
 <Footer color="indigo" className="page-footer font-small">
 
   <Container fluid className="text-center text-md-left">
-    <Row>
+    {/* <Row>
       <Col md="6">
       <h5 className="title">Catch</h5>
       </Col>
-    </Row>
+    </Row> */}
   </Container>
   <div className="footer-copyright text-center py-3">
     <Container fluid>
