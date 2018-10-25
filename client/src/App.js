@@ -14,7 +14,8 @@ import 'mdbreact/dist/css/mdb.css';
 import API from "./utils/API";
 
 
-
+class App extends Component {
+  
   state = {
     room: "5bd16c99b837b3d9cb5c2ff6",
     hooked: true
