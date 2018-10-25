@@ -9,9 +9,9 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findByGender: function(req, res) {
+  findGenderInterest: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .find({ genderInterest: "Male"})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
