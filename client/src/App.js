@@ -6,6 +6,7 @@ import DateCard from "./pages/DateCard";
 import MatchCard from "./pages/MatchCard";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Profile from "./pages/Profile";
 import InstantMessage from "./pages/InstantMessage";
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/dates" component={DateCard} />
         <Route exact path="/matches" component={MatchCard} />
+        <Route exact path="/matches" component={Profile} />
         <Route exact path="/chat" component={InstantMessage} />
       </Switch>
     </div>

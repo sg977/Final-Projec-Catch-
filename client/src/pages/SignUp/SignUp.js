@@ -21,11 +21,11 @@ class FormsPage extends React.Component  {
       lastName: "",
       email: "",
       password: "",
-      image: "",
+      image: "https://media.licdn.com/dms/image/C5603AQGHPnB8Z7yGUA/profile-displayphoto-shrink_200_200/0?e=1545868800&v=beta&t=2zqGBSgzEf4bomDQytPQ_CoDKSjBCjws-Ovm6ej4tTQ",
       age: "",
       neighborhood: "",
-      gender: "",
-      genderInterest: "",
+      gender: "Male",
+      genderInterest: "Female",
       date: "",
       matched: false,
       hooked: false
@@ -56,8 +56,8 @@ class FormsPage extends React.Component  {
         gender: this.state.gender,
         genderInterest: this.state.genderInterest,
         date: new Date(Date.now()),
-        matched: this.state.matched,
-        hooked: this.state.hooked
+        matched: false,
+        hooked: false
       })
     
   };
@@ -78,20 +78,25 @@ class FormsPage extends React.Component  {
                   <p className="h4 text-center py-4">Sign up</p>
                   <div className="grey-text">
                     
-                  
-                    <Input label="First Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Last Name" icon="user" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Age" icon="address-book-o" group type="number" validate error="wrong" success="right" />
-                    <Input label="Neighborhood" icon="address-card" group type="text" validate error="wrong" success="right" /> 
-                    
-                    <Select />
-                    <Select1 />
-                    <Input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
-                    <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right"/>
-                    <Input label="Your password" icon="lock" group type="password" validate/>
-                    <Input label="Confirm your password" icon="key" group type="password" validate error="wrong" success="right"/>
 
-                    <ImageUpload />
+                    <Input label="First Name" name="firstName" icon="user" group type="text" validate error="wrong" success="right" value={this.state.firstName} onChange={this.handleInputChange}/>
+                    <Input label="Last Name" name="lastName" icon="user" group type="text" validate error="wrong" success="right" value={this.state.lastName} onChange={this.handleInputChange}/>
+
+                    <Select name="gender" value={this.state.gender} onChange={this.handleInputChange} />
+                    <Select1 name="genderInterest" value={this.state.genderInterest} onChange={this.handleInputChange}/>
+
+                    <Input label="Age" name="age" icon="user" group type="number" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Neighborhood" name="neighborhood" icon="user" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} /> 
+                    <Input label="Your email" name="email" icon="envelope" group type="email" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right" onChange={this.handleInputChange} />
+                    <Input label="Your password" name="password" icon="lock" group type="password" value={this.state.password} validate onChange={this.handleInputChange} />
+
+                    <ImageUpload
+                    name="image"
+                    onChange={this.handleInputChange}
+                    value={this.state.image}                  
+                    />
+
                   </div>
                   <div className="text-center py-4 mt-3">
                     <Button color="cyan" type="submit" raised to="/dates" onClick={this.handleFormSubmit}>Register</Button>

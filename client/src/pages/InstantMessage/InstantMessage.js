@@ -19,7 +19,7 @@ class InstantMessage extends Component {
     user: 1,
     partnerID: 2,
     parterName: "",
-    room: "5bcfa26f27963fa26bb7d284",
+    room: "",
     hooked: null,
     newChat: null,
     chat: []
