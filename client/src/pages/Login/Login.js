@@ -10,13 +10,14 @@ import { Container, Row, Col, Input, Button } from 'mdbreact';
 class FormsPage extends React.Component  {
   render() {
     return(
+
       <div>
               <Header />
       <Container>
   
         <Row>
           <Col md="6">
-            <form>
+            <form id="login">
               <p className="h5 text-center mb-4">Sign in</p>
               <div className="grey-text">
                 <Input label="Type your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
@@ -34,7 +35,10 @@ class FormsPage extends React.Component  {
         
         
       </Container>
+      <div id="bottom">
       <Footer />
+      </div>
+      
       </div>
 
     );

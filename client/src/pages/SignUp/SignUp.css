@@ -30,13 +30,12 @@ Footer {
 
 .md-form {
     float: left; 
-  
-    
+   
 
 }
 
-.form {
-    margin-left: 600px;
+#signUp {
+    margin-left: 80px;
 }
 
 .inline {
@@ -50,4 +49,8 @@ Footer {
 
 .imgPreview {
     margin-left: -20px;
+}
+
+.text-center py-4 {
+    font-size: 400px;
 }

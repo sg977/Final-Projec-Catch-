@@ -12,9 +12,15 @@ class Landing extends React.Component  {
       return(
    <div>
         <div id="animate">
-            <h1>Catch Yourself A Winner</h1>
+            <p id="title">Catch</p>
+            <div id="subtitle">
+            <p>I Kinda Wanna Be</p>
+            <p> More Than Just Friends</p>
+             </div>
+            <div id="buttons">
             <Button color="primary">Login</Button>
             <Button>Sign Up</Button>
+            </div>
         <div id="logo">
         <img src={Logo} />
         </div>

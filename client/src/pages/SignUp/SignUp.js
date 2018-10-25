@@ -73,6 +73,7 @@ class FormsPage extends React.Component  {
     
         <Row>
           <Col lg="12">
+          <div id="signUp">
 
                 <form>
                   <p className="h4 text-center py-4">Sign up</p>
@@ -102,6 +103,7 @@ class FormsPage extends React.Component  {
                     <Button color="cyan" type="submit" raised to="/dates" onClick={this.handleFormSubmit}>Register</Button>
                   </div>
                 </form>
+                </div>
           
           </Col>
         </Row>

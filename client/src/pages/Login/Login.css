@@ -1,11 +1,9 @@
-/* @media all and (min-width: 480px) { */
-    .Login {
-      padding: 0px;
-    }
-  
-    .Login form {
-      padding-top: 70px;
-      margin: 0 auto;
-      max-width: 320px;
-    }
-  /* } */
+
+
+  #bottom {
+    margin-bottom: -50px;
+  }
+
+  #login {
+    margin: 200px 50px 500px 80px;
+  }

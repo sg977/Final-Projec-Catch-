@@ -8,6 +8,8 @@ import MessageRec from '../../components/MessageRec';
 import MessageText from '../../components/MessageText';
 import SendButton from '../../components/SendButton';
 import HookButton from '../../components/HookButton';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import API from '../../utils/API';
 
 
@@ -105,6 +107,7 @@ class InstantMessage extends Component {
   render() {
     return (
       <div className="App">
+      <Header />
         <div className="card main-disp">
           <div className="partner-disp">
             <ChatPartner 
@@ -145,6 +148,7 @@ class InstantMessage extends Component {
                 {console.log(this.state.parterName)}
               </div>
         </div>
+        <Footer />
       </div>
     );
   }
