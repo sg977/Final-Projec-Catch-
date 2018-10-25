@@ -22,7 +22,7 @@ const App = () => (
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/dates" component={DateCard} />
         <Route exact path="/matches" component={MatchCard} />
-        <Route exact path="/matches" component={Profile} />
+        <Route exact path="/profile" component={Profile} />
         <Route exact path="/chat" component={InstantMessage} />
       </Switch>
     </div>
